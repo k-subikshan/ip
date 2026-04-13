@@ -159,7 +159,7 @@
                 <p><b>Lost At:</b> {{ item.lost_location }}</p>
                 <p><b>Date:</b> {{ item.lost_date|date:"d M Y" }}</p>
                 <p>{{ item.description|truncatewords:15 }}</p>
-                <a href="mailto:{{ item.owner_email }}" class="btn-contact">
+                <a href="mailto:{{ item.owner_email }}">
                     <i class="fas fa-envelope"></i> Contact Owner
                 </a>
             </div>
@@ -185,7 +185,7 @@
                 <p><b>Found At:</b> {{ item.found_location }}</p>
                 <p><b>Date:</b> {{ item.found_date|date:"d M Y" }}</p>
                 <p>{{ item.description|truncatewords:15 }}</p>
-                <a href="mailto:{{ item.finder_email }}" class="btn-contact">
+                <a href="mailto:{{ item.finder_email }}">
                     <i class="fas fa-envelope"></i> Contact Finder
                 </a>
             </div>
