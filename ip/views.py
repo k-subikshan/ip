@@ -21,13 +21,15 @@ def search(request):
             Q(description__icontains=query) |
             Q(brand__icontains=query) |
             Q(lost_location__icontains=query) |
-            Q(owner_name__icontains=query)
+            Q(owner_name__icontains=query) |
+            Q(item_type__icontains=query)   # ← ADD THIS
         )
         found_items = found_items.filter(
             Q(description__icontains=query) |
             Q(brand__icontains=query) |
             Q(found_location__icontains=query) |
-            Q(finder_name__icontains=query)
+            Q(finder_name__icontains=query) |
+            Q(item_type__icontains=query)   # ← ADD THIS
         )
 
     if item_type:
@@ -40,7 +42,6 @@ def search(request):
         'query': query,
         'item_type': item_type,
     })
-
 
 def lost(request):
     if request.method == "POST":
