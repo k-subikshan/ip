@@ -160,7 +160,7 @@
                 <p><b>Date:</b> {{ item.lost_date|date:"d M Y" }}</p>
                 <p>{{ item.description|truncatewords:15 }}</p>
                 <a href="mailto:{{ item.owner_email }}">
-                    <i class="fas fa-envelope"></i> Contact Owner
+                    <i class="fas fa-envelope"></i> {{ item.owner_email }}
                 </a>
             </div>
             {% empty %}
@@ -186,7 +186,7 @@
                 <p><b>Date:</b> {{ item.found_date|date:"d M Y" }}</p>
                 <p>{{ item.description|truncatewords:15 }}</p>
                 <a href="mailto:{{ item.finder_email }}">
-                    <i class="fas fa-envelope"></i> Contact Finder
+                    <i class="fas fa-envelope"></i> {{ item.finder_email }}
                 </a>
             </div>
             {% empty %}
